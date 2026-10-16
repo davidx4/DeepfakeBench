@@ -1,0 +1,1812 @@
+{
+  "HiDF": {
+    "HiDF_real": {
+      "test": {
+        "real_c00031": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00031.jpg"
+          ]
+        },
+        "real_c00076": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00076.jpg"
+          ]
+        },
+        "real_c00402": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00402.jpg"
+          ]
+        },
+        "real_c00414": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00414.jpg"
+          ]
+        },
+        "real_c00777": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00777.jpg"
+          ]
+        },
+        "real_c00833": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c00833.jpg"
+          ]
+        },
+        "real_c01071": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01071.jpg"
+          ]
+        },
+        "real_c01121": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01121.jpg"
+          ]
+        },
+        "real_c01442": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01442.jpg"
+          ]
+        },
+        "real_c01503": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01503.jpg"
+          ]
+        },
+        "real_c01653": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01653.jpg"
+          ]
+        },
+        "real_c01722": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c01722.jpg"
+          ]
+        },
+        "real_c02248": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c02248.jpg"
+          ]
+        },
+        "real_c02251": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c02251.jpg"
+          ]
+        },
+        "real_c02661": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c02661.jpg"
+          ]
+        },
+        "real_c03294": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c03294.jpg"
+          ]
+        },
+        "real_c03409": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c03409.jpg"
+          ]
+        },
+        "real_c03502": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c03502.jpg"
+          ]
+        },
+        "real_c03680": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c03680.jpg"
+          ]
+        },
+        "real_c03843": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c03843.jpg"
+          ]
+        },
+        "real_c04141": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04141.jpg"
+          ]
+        },
+        "real_c04404": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04404.jpg"
+          ]
+        },
+        "real_c04473": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04473.jpg"
+          ]
+        },
+        "real_c04537": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04537.jpg"
+          ]
+        },
+        "real_c04908": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04908.jpg"
+          ]
+        },
+        "real_c04958": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c04958.jpg"
+          ]
+        },
+        "real_c05055": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c05055.jpg"
+          ]
+        },
+        "real_c05370": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c05370.jpg"
+          ]
+        },
+        "real_c10003": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c10003.jpg"
+          ]
+        },
+        "real_c10448": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c10448.jpg"
+          ]
+        },
+        "real_c10608": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c10608.jpg"
+          ]
+        },
+        "real_c10646": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c10646.jpg"
+          ]
+        },
+        "real_c10756": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c10756.jpg"
+          ]
+        },
+        "real_c11185": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11185.jpg"
+          ]
+        },
+        "real_c11457": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11457.jpg"
+          ]
+        },
+        "real_c11516": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11516.jpg"
+          ]
+        },
+        "real_c11634": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11634.jpg"
+          ]
+        },
+        "real_c11746": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11746.jpg"
+          ]
+        },
+        "real_c11836": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c11836.jpg"
+          ]
+        },
+        "real_c12374": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c12374.jpg"
+          ]
+        },
+        "real_c12588": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c12588.jpg"
+          ]
+        },
+        "real_c13025": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c13025.jpg"
+          ]
+        },
+        "real_c13343": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c13343.jpg"
+          ]
+        },
+        "real_c13750": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c13750.jpg"
+          ]
+        },
+        "real_c13876": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c13876.jpg"
+          ]
+        },
+        "real_c14012": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14012.jpg"
+          ]
+        },
+        "real_c14082": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14082.jpg"
+          ]
+        },
+        "real_c14237": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14237.jpg"
+          ]
+        },
+        "real_c14274": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14274.jpg"
+          ]
+        },
+        "real_c14440": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14440.jpg"
+          ]
+        },
+        "real_c14452": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14452.jpg"
+          ]
+        },
+        "real_c14567": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14567.jpg"
+          ]
+        },
+        "real_c14739": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14739.jpg"
+          ]
+        },
+        "real_c14928": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14928.jpg"
+          ]
+        },
+        "real_c14949": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c14949.jpg"
+          ]
+        },
+        "real_c15103": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c15103.jpg"
+          ]
+        },
+        "real_c15149": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c15149.jpg"
+          ]
+        },
+        "real_c15334": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c15334.jpg"
+          ]
+        },
+        "real_c15838": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c15838.jpg"
+          ]
+        },
+        "real_c15877": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c15877.jpg"
+          ]
+        },
+        "real_c16001": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16001.jpg"
+          ]
+        },
+        "real_c16009": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16009.jpg"
+          ]
+        },
+        "real_c16031": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16031.jpg"
+          ]
+        },
+        "real_c16048": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16048.jpg"
+          ]
+        },
+        "real_c16317": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16317.jpg"
+          ]
+        },
+        "real_c16318": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16318.jpg"
+          ]
+        },
+        "real_c16335": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16335.jpg"
+          ]
+        },
+        "real_c16422": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16422.jpg"
+          ]
+        },
+        "real_c16498": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16498.jpg"
+          ]
+        },
+        "real_c16845": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16845.jpg"
+          ]
+        },
+        "real_c16849": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c16849.jpg"
+          ]
+        },
+        "real_c17005": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17005.jpg"
+          ]
+        },
+        "real_c17040": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17040.jpg"
+          ]
+        },
+        "real_c17123": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17123.jpg"
+          ]
+        },
+        "real_c17154": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17154.jpg"
+          ]
+        },
+        "real_c17356": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17356.jpg"
+          ]
+        },
+        "real_c17579": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17579.jpg"
+          ]
+        },
+        "real_c17863": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c17863.jpg"
+          ]
+        },
+        "real_c18148": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18148.jpg"
+          ]
+        },
+        "real_c18312": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18312.jpg"
+          ]
+        },
+        "real_c18635": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18635.jpg"
+          ]
+        },
+        "real_c18788": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18788.jpg"
+          ]
+        },
+        "real_c18815": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18815.jpg"
+          ]
+        },
+        "real_c18996": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c18996.jpg"
+          ]
+        },
+        "real_c19174": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19174.jpg"
+          ]
+        },
+        "real_c19247": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19247.jpg"
+          ]
+        },
+        "real_c19378": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19378.jpg"
+          ]
+        },
+        "real_c19382": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19382.jpg"
+          ]
+        },
+        "real_c19500": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19500.jpg"
+          ]
+        },
+        "real_c19598": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19598.jpg"
+          ]
+        },
+        "real_c19735": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c19735.jpg"
+          ]
+        },
+        "real_c20110": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c20110.jpg"
+          ]
+        },
+        "real_c20183": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c20183.jpg"
+          ]
+        },
+        "real_c20256": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c20256.jpg"
+          ]
+        },
+        "real_c20678": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c20678.jpg"
+          ]
+        },
+        "real_c20947": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c20947.jpg"
+          ]
+        },
+        "real_c21035": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c21035.jpg"
+          ]
+        },
+        "real_c21726": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c21726.jpg"
+          ]
+        },
+        "real_c21848": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c21848.jpg"
+          ]
+        },
+        "real_c22379": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c22379.jpg"
+          ]
+        },
+        "real_c22449": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c22449.jpg"
+          ]
+        },
+        "real_c22455": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c22455.jpg"
+          ]
+        },
+        "real_c22497": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c22497.jpg"
+          ]
+        },
+        "real_c23262": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23262.jpg"
+          ]
+        },
+        "real_c23422": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23422.jpg"
+          ]
+        },
+        "real_c23688": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23688.jpg"
+          ]
+        },
+        "real_c23734": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23734.jpg"
+          ]
+        },
+        "real_c23789": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23789.jpg"
+          ]
+        },
+        "real_c23806": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c23806.jpg"
+          ]
+        },
+        "real_c24159": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24159.jpg"
+          ]
+        },
+        "real_c24229": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24229.jpg"
+          ]
+        },
+        "real_c24524": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24524.jpg"
+          ]
+        },
+        "real_c24554": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24554.jpg"
+          ]
+        },
+        "real_c24615": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24615.jpg"
+          ]
+        },
+        "real_c24616": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24616.jpg"
+          ]
+        },
+        "real_c24649": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24649.jpg"
+          ]
+        },
+        "real_c24651": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24651.jpg"
+          ]
+        },
+        "real_c24933": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c24933.jpg"
+          ]
+        },
+        "real_c25021": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25021.jpg"
+          ]
+        },
+        "real_c25065": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25065.jpg"
+          ]
+        },
+        "real_c25125": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25125.jpg"
+          ]
+        },
+        "real_c25256": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25256.jpg"
+          ]
+        },
+        "real_c25314": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25314.jpg"
+          ]
+        },
+        "real_c25345": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25345.jpg"
+          ]
+        },
+        "real_c25442": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25442.jpg"
+          ]
+        },
+        "real_c25537": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25537.jpg"
+          ]
+        },
+        "real_c25570": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25570.jpg"
+          ]
+        },
+        "real_c25709": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25709.jpg"
+          ]
+        },
+        "real_c25900": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25900.jpg"
+          ]
+        },
+        "real_c25921": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25921.jpg"
+          ]
+        },
+        "real_c25923": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c25923.jpg"
+          ]
+        },
+        "real_c26111": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c26111.jpg"
+          ]
+        },
+        "real_c26230": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c26230.jpg"
+          ]
+        },
+        "real_c26304": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c26304.jpg"
+          ]
+        },
+        "real_c26772": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c26772.jpg"
+          ]
+        },
+        "real_c26859": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c26859.jpg"
+          ]
+        },
+        "real_c27082": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c27082.jpg"
+          ]
+        },
+        "real_c27120": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c27120.jpg"
+          ]
+        },
+        "real_c27756": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c27756.jpg"
+          ]
+        },
+        "real_c27867": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c27867.jpg"
+          ]
+        },
+        "real_c28340": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c28340.jpg"
+          ]
+        },
+        "real_c28641": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c28641.jpg"
+          ]
+        },
+        "real_c28689": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c28689.jpg"
+          ]
+        },
+        "real_c28713": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c28713.jpg"
+          ]
+        },
+        "real_c29048": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29048.jpg"
+          ]
+        },
+        "real_c29151": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29151.jpg"
+          ]
+        },
+        "real_c29516": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29516.jpg"
+          ]
+        },
+        "real_c29545": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29545.jpg"
+          ]
+        },
+        "real_c29580": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29580.jpg"
+          ]
+        },
+        "real_c29603": {
+          "label": "HiDF_real",
+          "frames": [
+            "../../data/HiDF/real/c29603.jpg"
+          ]
+        }
+      }
+    },
+    "HiDF_fake": {
+      "test": {
+        "fake_c00031_c00029": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00031_c00029.jpg"
+          ]
+        },
+        "fake_c00076_c00036": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00076_c00036.jpg"
+          ]
+        },
+        "fake_c00402_c00382": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00402_c00382.jpg"
+          ]
+        },
+        "fake_c00414_c00517": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00414_c00517.jpg"
+          ]
+        },
+        "fake_c00777_c00704": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00777_c00704.jpg"
+          ]
+        },
+        "fake_c00833_c27694": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c00833_c27694.jpg"
+          ]
+        },
+        "fake_c01071_c00990": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01071_c00990.jpg"
+          ]
+        },
+        "fake_c01121_c01042": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01121_c01042.jpg"
+          ]
+        },
+        "fake_c01442_c01233": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01442_c01233.jpg"
+          ]
+        },
+        "fake_c01503_c01442": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01503_c01442.jpg"
+          ]
+        },
+        "fake_c01653_c01470": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01653_c01470.jpg"
+          ]
+        },
+        "fake_c01722_c01510": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c01722_c01510.jpg"
+          ]
+        },
+        "fake_c02248_f40295": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c02248_f40295.jpg"
+          ]
+        },
+        "fake_c02251_f40237": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c02251_f40237.jpg"
+          ]
+        },
+        "fake_c02661_f40649": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c02661_f40649.jpg"
+          ]
+        },
+        "fake_c03294_f41281": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c03294_f41281.jpg"
+          ]
+        },
+        "fake_c03409_f41648": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c03409_f41648.jpg"
+          ]
+        },
+        "fake_c03502_f41680": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c03502_f41680.jpg"
+          ]
+        },
+        "fake_c03680_f41922": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c03680_f41922.jpg"
+          ]
+        },
+        "fake_c03843_f25969": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c03843_f25969.jpg"
+          ]
+        },
+        "fake_c04141_c02724": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04141_c02724.jpg"
+          ]
+        },
+        "fake_c04404_c03037": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04404_c03037.jpg"
+          ]
+        },
+        "fake_c04473_c03098": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04473_c03098.jpg"
+          ]
+        },
+        "fake_c04537_c03167": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04537_c03167.jpg"
+          ]
+        },
+        "fake_c04908_c03473": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04908_c03473.jpg"
+          ]
+        },
+        "fake_c04958_c03589": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c04958_c03589.jpg"
+          ]
+        },
+        "fake_c05055_f28358": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c05055_f28358.jpg"
+          ]
+        },
+        "fake_c05370_c05346": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c05370_c05346.jpg"
+          ]
+        },
+        "fake_c10003_c12595": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c10003_c12595.jpg"
+          ]
+        },
+        "fake_c10448_c10316": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c10448_c10316.jpg"
+          ]
+        },
+        "fake_c10608_c10555": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c10608_c10555.jpg"
+          ]
+        },
+        "fake_c10646_c10604": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c10646_c10604.jpg"
+          ]
+        },
+        "fake_c10756_c10717": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c10756_c10717.jpg"
+          ]
+        },
+        "fake_c11185_c11127": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11185_c11127.jpg"
+          ]
+        },
+        "fake_c11457_c13906": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11457_c13906.jpg"
+          ]
+        },
+        "fake_c11516_c11474": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11516_c11474.jpg"
+          ]
+        },
+        "fake_c11634_c11591": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11634_c11591.jpg"
+          ]
+        },
+        "fake_c11746_c11682": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11746_c11682.jpg"
+          ]
+        },
+        "fake_c11836_c11707": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c11836_c11707.jpg"
+          ]
+        },
+        "fake_c12374_c12320": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c12374_c12320.jpg"
+          ]
+        },
+        "fake_c12588_c12536": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c12588_c12536.jpg"
+          ]
+        },
+        "fake_c13025_c12952": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c13025_c12952.jpg"
+          ]
+        },
+        "fake_c13343_c13287": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c13343_c13287.jpg"
+          ]
+        },
+        "fake_c13750_c11124": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c13750_c11124.jpg"
+          ]
+        },
+        "fake_c13876_c13728": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c13876_c13728.jpg"
+          ]
+        },
+        "fake_c14012_c13897": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14012_c13897.jpg"
+          ]
+        },
+        "fake_c14082_c13931": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14082_c13931.jpg"
+          ]
+        },
+        "fake_c14237_c14158": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14237_c14158.jpg"
+          ]
+        },
+        "fake_c14274_c14102": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14274_c14102.jpg"
+          ]
+        },
+        "fake_c14440_c14327": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14440_c14327.jpg"
+          ]
+        },
+        "fake_c14452_c14336": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14452_c14336.jpg"
+          ]
+        },
+        "fake_c14567_c14308": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14567_c14308.jpg"
+          ]
+        },
+        "fake_c14739_c14549": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14739_c14549.jpg"
+          ]
+        },
+        "fake_c14928_c14833": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14928_c14833.jpg"
+          ]
+        },
+        "fake_c14949_c14849": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c14949_c14849.jpg"
+          ]
+        },
+        "fake_c15103_c17388": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c15103_c17388.jpg"
+          ]
+        },
+        "fake_c15149_c17389": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c15149_c17389.jpg"
+          ]
+        },
+        "fake_c15334_c17721": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c15334_c17721.jpg"
+          ]
+        },
+        "fake_c15838_c15655": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c15838_c15655.jpg"
+          ]
+        },
+        "fake_c15877_c15653": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c15877_c15653.jpg"
+          ]
+        },
+        "fake_c16001_c15957": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16001_c15957.jpg"
+          ]
+        },
+        "fake_c16009_c15845": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16009_c15845.jpg"
+          ]
+        },
+        "fake_c16031_c15912": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16031_c15912.jpg"
+          ]
+        },
+        "fake_c16048_c15859": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16048_c15859.jpg"
+          ]
+        },
+        "fake_c16317_c13504": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16317_c13504.jpg"
+          ]
+        },
+        "fake_c16318_c13542": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16318_c13542.jpg"
+          ]
+        },
+        "fake_c16335_c16222": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16335_c16222.jpg"
+          ]
+        },
+        "fake_c16422_c16173": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16422_c16173.jpg"
+          ]
+        },
+        "fake_c16498_c16341": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16498_c16341.jpg"
+          ]
+        },
+        "fake_c16845_c16667": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16845_c16667.jpg"
+          ]
+        },
+        "fake_c16849_c16722": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c16849_c16722.jpg"
+          ]
+        },
+        "fake_c17005_c16781": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17005_c16781.jpg"
+          ]
+        },
+        "fake_c17040_c16786": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17040_c16786.jpg"
+          ]
+        },
+        "fake_c17123_c17036": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17123_c17036.jpg"
+          ]
+        },
+        "fake_c17154_c16960": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17154_c16960.jpg"
+          ]
+        },
+        "fake_c17356_c17076": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17356_c17076.jpg"
+          ]
+        },
+        "fake_c17579_c17336": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17579_c17336.jpg"
+          ]
+        },
+        "fake_c17863_c17657": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c17863_c17657.jpg"
+          ]
+        },
+        "fake_c18148_c28994": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18148_c28994.jpg"
+          ]
+        },
+        "fake_c18312_c26592": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18312_c26592.jpg"
+          ]
+        },
+        "fake_c18635_c29424": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18635_c29424.jpg"
+          ]
+        },
+        "fake_c18788_c29086": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18788_c29086.jpg"
+          ]
+        },
+        "fake_c18815_c29680": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18815_c29680.jpg"
+          ]
+        },
+        "fake_c18996_f21343": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c18996_f21343.jpg"
+          ]
+        },
+        "fake_c19174_c18105": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19174_c18105.jpg"
+          ]
+        },
+        "fake_c19247_c18230": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19247_c18230.jpg"
+          ]
+        },
+        "fake_c19378_c18334": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19378_c18334.jpg"
+          ]
+        },
+        "fake_c19382_c18364": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19382_c18364.jpg"
+          ]
+        },
+        "fake_c19500_c18428": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19500_c18428.jpg"
+          ]
+        },
+        "fake_c19598_c19014": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19598_c19014.jpg"
+          ]
+        },
+        "fake_c19735_c19169": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c19735_c19169.jpg"
+          ]
+        },
+        "fake_c20110_c17769": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c20110_c17769.jpg"
+          ]
+        },
+        "fake_c20183_c17933": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c20183_c17933.jpg"
+          ]
+        },
+        "fake_c20256_c17928": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c20256_c17928.jpg"
+          ]
+        },
+        "fake_c20678_c20278": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c20678_c20278.jpg"
+          ]
+        },
+        "fake_c20947_c20495": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c20947_c20495.jpg"
+          ]
+        },
+        "fake_c21035_c20505": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c21035_c20505.jpg"
+          ]
+        },
+        "fake_c21726_c21177": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c21726_c21177.jpg"
+          ]
+        },
+        "fake_c21848_c21258": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c21848_c21258.jpg"
+          ]
+        },
+        "fake_c22379_c21665": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c22379_c21665.jpg"
+          ]
+        },
+        "fake_c22449_c24392": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c22449_c24392.jpg"
+          ]
+        },
+        "fake_c22455_c17040": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c22455_c17040.jpg"
+          ]
+        },
+        "fake_c22497_c21781": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c22497_c21781.jpg"
+          ]
+        },
+        "fake_c23262_c22496": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23262_c22496.jpg"
+          ]
+        },
+        "fake_c23422_c22514": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23422_c22514.jpg"
+          ]
+        },
+        "fake_c23688_c19950": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23688_c19950.jpg"
+          ]
+        },
+        "fake_c23734_c22834": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23734_c22834.jpg"
+          ]
+        },
+        "fake_c23789_c19950": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23789_c19950.jpg"
+          ]
+        },
+        "fake_c23806_c19950": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c23806_c19950.jpg"
+          ]
+        },
+        "fake_c24159_c23049": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24159_c23049.jpg"
+          ]
+        },
+        "fake_c24229_c25850": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24229_c25850.jpg"
+          ]
+        },
+        "fake_c24524_c23377": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24524_c23377.jpg"
+          ]
+        },
+        "fake_c24554_c23400": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24554_c23400.jpg"
+          ]
+        },
+        "fake_c24615_c26129": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24615_c26129.jpg"
+          ]
+        },
+        "fake_c24616_c26132": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24616_c26132.jpg"
+          ]
+        },
+        "fake_c24649_c23565": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24649_c23565.jpg"
+          ]
+        },
+        "fake_c24651_c23576": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24651_c23576.jpg"
+          ]
+        },
+        "fake_c24933_c26387": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c24933_c26387.jpg"
+          ]
+        },
+        "fake_c25021_c21062": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25021_c21062.jpg"
+          ]
+        },
+        "fake_c25065_c23850": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25065_c23850.jpg"
+          ]
+        },
+        "fake_c25125_c23865": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25125_c23865.jpg"
+          ]
+        },
+        "fake_c25256_c24014": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25256_c24014.jpg"
+          ]
+        },
+        "fake_c25314_c24005": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25314_c24005.jpg"
+          ]
+        },
+        "fake_c25345_c24138": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25345_c24138.jpg"
+          ]
+        },
+        "fake_c25442_c24219": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25442_c24219.jpg"
+          ]
+        },
+        "fake_c25537_c24318": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25537_c24318.jpg"
+          ]
+        },
+        "fake_c25570_c24360": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25570_c24360.jpg"
+          ]
+        },
+        "fake_c25709_c24472": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25709_c24472.jpg"
+          ]
+        },
+        "fake_c25900_c24629": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25900_c24629.jpg"
+          ]
+        },
+        "fake_c25921_c27261": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25921_c27261.jpg"
+          ]
+        },
+        "fake_c25923_c27222": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c25923_c27222.jpg"
+          ]
+        },
+        "fake_c26111_c24839": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c26111_c24839.jpg"
+          ]
+        },
+        "fake_c26230_c02149": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c26230_c02149.jpg"
+          ]
+        },
+        "fake_c26304_c27501": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c26304_c27501.jpg"
+          ]
+        },
+        "fake_c26772_c25488": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c26772_c25488.jpg"
+          ]
+        },
+        "fake_c26859_c25483": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c26859_c25483.jpg"
+          ]
+        },
+        "fake_c27082_c28139": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c27082_c28139.jpg"
+          ]
+        },
+        "fake_c27120_c28187": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c27120_c28187.jpg"
+          ]
+        },
+        "fake_c27756_c26069": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c27756_c26069.jpg"
+          ]
+        },
+        "fake_c27867_c28620": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c27867_c28620.jpg"
+          ]
+        },
+        "fake_c28340_c25898": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c28340_c25898.jpg"
+          ]
+        },
+        "fake_c28641_c26142": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c28641_c26142.jpg"
+          ]
+        },
+        "fake_c28689_c26205": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c28689_c26205.jpg"
+          ]
+        },
+        "fake_c28713_c26195": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c28713_c26195.jpg"
+          ]
+        },
+        "fake_c29048_c26493": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29048_c26493.jpg"
+          ]
+        },
+        "fake_c29151_c29300": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29151_c29300.jpg"
+          ]
+        },
+        "fake_c29516_c26773": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29516_c26773.jpg"
+          ]
+        },
+        "fake_c29545_c19903": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29545_c19903.jpg"
+          ]
+        },
+        "fake_c29580_f20189": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29580_f20189.jpg"
+          ]
+        },
+        "fake_c29603_c27061": {
+          "label": "HiDF_fake",
+          "frames": [
+            "../../data/HiDF/fake/c29603_c27061.jpg"
+          ]
+        }
+      }
+    }
+  }
+}

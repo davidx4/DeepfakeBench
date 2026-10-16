@@ -181,8 +181,24 @@ def main():
             epoch = int(weights_path.split('/')[-1].split('.')[0].split('_')[2])
         except:
             epoch = 0
+        # ckpt = torch.load(weights_path, map_location=device)
+        # model.load_state_dict(ckpt, strict=True)
+        # FIX
         ckpt = torch.load(weights_path, map_location=device)
+
+        if config['model_name'] == 'effort':
+            ckpt = {
+                key.removeprefix('module.'): value
+                for key, value in ckpt.items()
+            }
+
+            if 'backbone.embeddings.position_ids' not in ckpt:
+                ckpt['backbone.embeddings.position_ids'] = (
+                    model.state_dict()['backbone.embeddings.position_ids']
+                )
+
         model.load_state_dict(ckpt, strict=True)
+
         print('===> Load checkpoint done!')
     else:
         print('Fail to load the pre-trained weights')

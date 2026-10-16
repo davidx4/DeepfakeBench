@@ -1,5 +1,5 @@
 mode: test
-lmdb: True
+lmdb: False
 rgb_dir: './datasets/rgb'
 lmdb_dir:  './datasets/lmdb'
 dataset_json_folder: './preprocessing/dataset_json'
@@ -36,3 +36,7 @@ label_dict:
   # Roop
   roop_Real: 0
   roop_Fake: 1
+  DeepFakeFace_real: 0
+  DeepFakeFace_fake: 1
+  HiDF_real: 0
+  HiDF_fake: 1
