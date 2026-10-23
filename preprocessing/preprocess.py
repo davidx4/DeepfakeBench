@@ -4,54 +4,7 @@
 # description: Data pre-processing script for deepfake dataset.
 
 
-"""
-Original dataset structure before the preprocessing:
-
--FaceForensics++
-    -original_sequences
-        -youtube
-            -c23
-                -videos
-                    *.mp4
-    -manipulated_sequences
-        -Deepfakes
-            -c23
-                -videos
-        -Face2Face
-            -c23
-                -videos
-        -FaceSwap
-            -c23
-                -videos
-        -NeuralTextures
-            -c23
-                -videos
-        -FaceShifter
-            -c23
-                -videos
-        -DeepFakeDetection
-            -c23
-                -videos
-                
--Celeb-DF-v1/v2
-    -Celeb-synthesis
-        -videos
-    -Celeb-real
-        -videos
-    -YouTube-real
-        -videos
-
--DFDCP
-    -method_A
-    -method_B
-    -original_videos
-
--DeeperForensics-1.0
-    -manipulated_videos
-    -source_videos
-
-We then additionally obtain "frames", "landmarks", and "mask" directories in same directory as the "videos" folder.
-"""
+"""Crop JPG images and save aligned faces, landmarks, and optional masks."""
 
 
 import os
@@ -206,210 +159,114 @@ def extract_aligned_face_dlib(face_detector, predictor, image, res=256, mask=Non
     else:
         return None, None, None
 
-def video_manipulate(
-    movie_path: Path,
-    mask_path: Path,
-    dataset_path: Path,
-    mode: str,
-    num_frames: int, 
-    stride: int, 
-    ) -> None:
-    """
-    Processes a single video file by detecting and cropping the largest face in each frame and saving the results.
-
-    Args:
-        movie_path (str): Path to the video file to process.
-        dataset_path (str): Path to the dataset directory.
-        mask_path (str): Path to the mask directory.
-        mode (str): Either 'fixed_num_frames' or 'fixed_stride'.
-        num_frames (int): Number of frames to extract from the video.
-        stride (int): Number of frames to skip between each frame extracted.
-        margin (float): Amount to increase the size of the face bounding box by.
-        visualization (bool): Whether to save visualization images.
-
-    Returns:
-        None
-    """
-
-    # Define face detector and predictor models
+def image_manipulate(image_paths, mask_paths, dataset_path, logger):
+    """Crop every JPG image in a source folder and save its landmarks and optional mask."""
     face_detector = dlib.get_frontal_face_detector()
     predictor_path = './dlib_tools/shape_predictor_81_face_landmarks.dat'
-    ## Check if predictor path exists
     if not os.path.exists(predictor_path):
         logger.error(f"Predictor path does not exist: {predictor_path}")
-        sys.exit()
+        return
     face_predictor = dlib.shape_predictor(predictor_path)
-    
-    def facecrop(
-        org_path: Path,
-        mask_path: Path, 
-        save_path: Path, 
-        mode: str,
-        num_frames: int, 
-        stride: int,
-        face_predictor: dlib.shape_predictor, 
-        face_detector: dlib.fhog_object_detector,
-        margin: float = 0.5, 
-        visualization: bool = False
-        ) -> None:
-        """
-        Helper function for cropping face and extracting landmarks.
-        """
-        
-        # Open the video file
-        assert org_path.exists(), f"Video file {org_path} does not exist."
-        cap_org = cv2.VideoCapture(str(org_path))
-        if not cap_org.isOpened():
-            logger.error(f"Failed to open {org_path}")
-            return
 
-        if mask_path is not None:
-            cap_mask = cv2.VideoCapture(str(mask_path))
-            if not cap_mask.isOpened():
-                logger.error(f"Failed to open {mask_path}")
-                return
-        
-        # Get the number of frames in the video
-        frame_count_org = int(cap_org.get(cv2.CAP_PROP_FRAME_COUNT))
+    for source_path in image_paths:
+        image = cv2.imread(str(source_path))
+        if image is None:
+            logger.warning(f"Failed to read image {source_path}")
+            continue
 
-        # Get the mode
-        if mode == 'fixed_num_frames':
-            # Get the frame rate of the video by dividing the number of frames by the duration (same interval between frames)
-            frame_idxs = np.linspace(0, frame_count_org - 1, num_frames, endpoint=True, dtype=int)
-        elif mode == 'fixed_stride':
-            # Get the frame rate of the video by dividing the number of frames by the duration (same interval between frames)
-            frame_idxs = np.arange(0, frame_count_org, stride, dtype=int)
+        relative_path = source_path.relative_to(dataset_path)
+        if relative_path.parts and relative_path.parts[0] == 'videos':
+            relative_path = Path(*relative_path.parts[1:])
+        output_group = relative_path.parent
+        if output_group == Path('.'):
+            output_group = Path(relative_path.stem)
 
-        # Iterate through the frames
-        for cnt_frame in range(frame_count_org):
-            ret_org, frame_org = cap_org.read()
-            if mask_path is not None:
-                ret_mask, frame_mask = cap_mask.read()
-            else:
-                frame_mask = None
-            height, width = frame_org.shape[:-1]
+        source_mask = next(
+            (
+                mask_paths.get(relative_path.with_suffix(suffix))
+                for suffix in (source_path.suffix, '.jpg', '.jpeg', '.png')
+                if mask_paths.get(relative_path.with_suffix(suffix)) is not None
+            ),
+            None,
+        )
+        mask = None
+        if source_mask is not None:
+            mask = cv2.imread(str(source_mask), cv2.IMREAD_GRAYSCALE)
+            if mask is None:
+                logger.warning(f"Failed to read mask {source_mask}")
+        elif mask_paths:
+            logger.warning(f"No mask found for image {source_path}")
 
-            # Check if the frame was successfully read
-            if not ret_org:
-                logger.warning(f"Failed to read frame {cnt_frame} of {org_path}")
-                break
-            
-            # Check if the mask was successfully read
-            if mask_path is not None and not ret_mask:
-                logger.warning(f"Failed to read mask {cnt_frame} of {mask_path}")
-                break
-            # Check if the frame is one of the frames to extract
-            if cnt_frame not in frame_idxs:
-                continue
+        cropped_face, landmarks, cropped_mask = extract_aligned_face_dlib(
+            face_detector, face_predictor, image, mask=mask
+        )
+        if cropped_face is None:
+            logger.warning(f"No face found in image {source_path}")
+            continue
+        if landmarks is None:
+            logger.warning(f"No landmarks found in image {source_path}")
+            continue
 
-            # Use the function to extract the aligned and cropped face
-            if mask_path is not None:
-                cropped_face, landmarks, masks = extract_aligned_face_dlib(face_detector, face_predictor, frame_org, mask=frame_mask)
-            else:
-                cropped_face, landmarks, _ = extract_aligned_face_dlib(face_detector, face_predictor, frame_org, mask=frame_mask)
-            
-            # Check if a face was detected and cropped
-            if cropped_face is None:
-                logger.warning(f"No faces in frame {cnt_frame} of {org_path}")
-                continue
-            
-            # Check if the landmarks were detected
-            if landmarks is None:
-                logger.warning(f"No landmarks in frame {cnt_frame} of {org_path}")
-                continue
+        frame_dir = dataset_path / 'frames' / output_group
+        frame_dir.mkdir(parents=True, exist_ok=True)
+        image_name = relative_path.with_suffix('.png').name
+        output_image = frame_dir / image_name
+        if not cv2.imwrite(str(output_image), cropped_face):
+            logger.error(f"Failed to write cropped image {output_image}")
+            continue
 
-            # Save cropped face, landmarks, and visualization image
-            save_path_ = save_path / 'frames' / org_path.stem
-            save_path_.mkdir(parents=True, exist_ok=True)
+        landmark_path = dataset_path / 'landmarks' / output_group / relative_path.with_suffix('.npy').name
+        landmark_path.parent.mkdir(parents=True, exist_ok=True)
+        np.save(str(landmark_path), landmarks)
 
-            # Save cropped face
-            image_path = save_path_ / f"{cnt_frame:03d}.png"
-            if not image_path.is_file():
-                cv2.imwrite(str(image_path), cropped_face)
-
-            # Save landmarks
-            land_path = save_path / 'landmarks' / org_path.stem / f"{cnt_frame:03d}.npy"
-            os.makedirs(os.path.dirname(land_path), exist_ok=True)
-            np.save(str(land_path), landmarks)
-
-            # Save mask
-            if mask_path is not None:
-                mask_path = save_path / 'masks' / org_path.stem / f"{cnt_frame:03d}.png"
-                os.makedirs(os.path.dirname(mask_path), exist_ok=True)
-                _, binary_mask = cv2.threshold(masks, 1, 255, cv2.THRESH_BINARY)  # obtain binary mask only
-                cv2.imwrite(str(mask_path), binary_mask)
-
-        # Release the video capture
-        cap_org.release()
-        if mask_path is not None:
-            cap_mask.release()
-
-    # Iterate through the videos in the dataset and extract faces
-    try:
-        facecrop(movie_path, mask_path, dataset_path, mode, num_frames, stride, face_predictor, face_detector)
-    except Exception as e:
-        logger.error(f"Error processing video {movie_path}: {e}")
+        if source_mask is not None and cropped_mask is not None:
+            mask_output = dataset_path / 'masks' / output_group / image_name
+            mask_output.parent.mkdir(parents=True, exist_ok=True)
+            _, binary_mask = cv2.threshold(cropped_mask, 1, 255, cv2.THRESH_BINARY)
+            if not cv2.imwrite(str(mask_output), binary_mask):
+                logger.error(f"Failed to write cropped mask {mask_output}")
 
 
-def preprocess(dataset_path, mask_path, mode, num_frames, stride, logger):
-    # Define paths to videos in dataset
-    movies_path_list = sorted([Path(p) for p in glob.glob(os.path.join(dataset_path, '**/*.mp4'), recursive=True)])
-    if len(movies_path_list) == 0:
-        logger.error(f"No videos found in {dataset_path}")
-        sys.exit()
-    logger.info(f"{len(movies_path_list)} videos found in {dataset_path}")
-    
-    # Define paths to masks in dataset
+def preprocess(dataset_path, mask_path, logger):
+    dataset_path = Path(dataset_path)
+    image_paths = sorted(
+        Path(path) for path in glob.glob(
+            os.path.join(dataset_path, '**/*.[jJ][pP][gG]'), recursive=True
+        )
+    )
+    if not image_paths:
+        logger.error(f"No JPG images found in {dataset_path}")
+        return
+    logger.info(f"{len(image_paths)} JPG images found in {dataset_path}")
+
+    masks_by_relative_path = {}
     if mask_path is not None:
-        masks_path_list = sorted([Path(p) for p in glob.glob(os.path.join(mask_path, '**/*.mp4'), recursive=True)])
-        if len(masks_path_list) == 0:
-            logger.error(f"No masks found in {mask_path}")
-            # sys.exit()
-        logger.info(f"{len(masks_path_list)} masks found in {mask_path}")    
-    
-    # Start timer
+        mask_path = Path(mask_path)
+        for mask_file in sorted(mask_path.rglob('*')):
+            if mask_file.is_file() and mask_file.suffix.lower() in {'.jpg', '.jpeg', '.png'}:
+                masks_by_relative_path[mask_file.relative_to(mask_path)] = mask_file
+        logger.info(f"{len(masks_by_relative_path)} image masks found in {mask_path}")
+
     start_time = time.monotonic()
+    images_by_directory = {}
+    for image_path in image_paths:
+        images_by_directory.setdefault(image_path.parent, []).append(image_path)
 
-    # Define the number of processes based on CPU capabilities
-    num_processes = os.cpu_count()
-
-    # Use multiprocessing to process videos in parallel
-    with concurrent.futures.ThreadPoolExecutor(max_workers=num_processes) as executor:
-        futures = []
-        for movie_path in movies_path_list:
-            # Check if there is a mask for the video
-            if mask_path is not None:
-                if movie_path.stem not in [path.stem for path in masks_path_list]:
-                    logger.error(f"No mask for video {movie_path}")
-                # Define the mask path
-                mask_path = next((path for path in masks_path_list if path.stem == movie_path.stem), None)
-                if mask_path is None:
-                    logger.error(f"Mask path not found for video {movie_path}")
-            # Create a future for each video and submit it for processing
-            futures.append(
-                executor.submit(
-                video_manipulate,
-                movie_path,
-                mask_path,
-                dataset_path,
-                mode,
-                num_frames,
-                stride,
-                )
-            )
-        # Wait for all futures to complete and log any errors
-        for future in tqdm(concurrent.futures.as_completed(futures), total=len(movies_path_list)):
-            # Print the current time
+    max_workers = os.cpu_count() or 1
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [
+            executor.submit(image_manipulate, paths, masks_by_relative_path, dataset_path, logger)
+            for paths in images_by_directory.values()
+        ]
+        for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures)):
             logger.info(f"Current time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             try:
                 future.result()
             except Exception as e:
-                logger.error(f"Error processing video: {e}")
-            
-        # End timer
-        end_time = time.monotonic()
-        duration_minutes = (end_time - start_time) / 60
-        logger.info(f"Total time taken: {duration_minutes:.2f} minutes")
+                logger.error(f"Error processing JPG images: {e}")
+
+    duration_minutes = (time.monotonic() - start_time) / 60
+    logger.info(f"Total time taken: {duration_minutes:.2f} minutes")
 
 if __name__ == '__main__':
     # from config.yaml load parameters
@@ -425,9 +282,6 @@ if __name__ == '__main__':
     dataset_name = config['preprocess']['dataset_name']['default']
     dataset_root_path = config['preprocess']['dataset_root_path']['default']
     comp = config['preprocess']['comp']['default']
-    mode = config['preprocess']['mode']['default']
-    stride = config['preprocess']['stride']['default']
-    num_frames = config['preprocess']['num_frames']['default']
     
     # use dataset_name and dataset_root_path to get dataset_path
     dataset_path = Path(os.path.join(dataset_root_path, dataset_name))
@@ -486,6 +340,18 @@ if __name__ == '__main__':
     elif dataset_name == 'UADFV':
         sub_dataset_names = ['fake', 'real']
         sub_dataset_paths = [Path(os.path.join(dataset_path, name)) for name in sub_dataset_names]
+    
+    ## DeepFakeFace
+    elif dataset_name == 'DeepFakeFace':
+        fake_sub_dataset_names = ['fake/' + name for name in os.listdir(os.path.join(dataset_path, 'fake'))]
+        sub_dataset_names = ['real'] + fake_sub_dataset_names
+        sub_dataset_paths = [Path(os.path.join(dataset_path, name)) for name in sub_dataset_names]
+
+    ## HiDF
+    elif dataset_name == 'HiDF':
+        sub_dataset_names = ['fake', 'real']
+        sub_dataset_paths = [Path(os.path.join(dataset_path, name)) for name in sub_dataset_names]
+    
     else:
         raise ValueError(f"Dataset {dataset_name} not recognized")
     
@@ -505,9 +371,9 @@ if __name__ == '__main__':
             # only part of FaceForensics++ has mask
             if dataset_name == 'FaceForensics++' and sub_dataset_path.parent in mask_dataset_paths:
                 mask_dataset_path = os.path.join(sub_dataset_path.parent, "masks")
-                preprocess(sub_dataset_path, mask_dataset_path, mode, num_frames, stride, logger)
+                preprocess(sub_dataset_path, mask_dataset_path, logger)
             else:
-                preprocess(sub_dataset_path, None, mode, num_frames, stride, logger)
+                preprocess(sub_dataset_path, None, logger)
     else:
         logger.error(f"Sub Dataset path does not exist: {sub_dataset_paths}")
         sys.exit()
