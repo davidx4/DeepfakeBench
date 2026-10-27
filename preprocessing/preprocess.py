@@ -1,10 +1,10 @@
 # author: Zhiyuan Yan
 # email: zhiyuanyan@link.cuhk.edu.cn
 # date: 2023-03-29
-# description: Data pre-processing script for deepfake dataset.
+# description: Align faces in a deepfake dataset without changing image resolution.
 
 
-"""Crop JPG images and save aligned faces, landmarks, and optional masks."""
+"""Align JPG images while preserving each input image resolution; save landmarks and optional masks."""
 
 
 import os
@@ -70,97 +70,102 @@ def get_keypts(image, face, predictor, face_detector):
     return pts
 
 
-def extract_aligned_face_dlib(face_detector, predictor, image, res=256, mask=None):
-    def img_align_crop(img, landmark=None, outsize=None, scale=1.3, mask=None):
-        """ 
-        align and crop the face according to the given bbox and landmarks
-        landmark: 5 key points
-        """
+def extract_aligned_face_dlib(face_detector, predictor, image, res=None, mask=None):
+    """
+    Align the largest detected face while preserving the input image dimensions.
 
-        M = None
-        target_size = [112, 112]
+    If res is None (the default), the output has the same width and height as
+    the input image. If res is an integer, output is res x res for compatibility
+    with the original preprocessing behavior.
+    """
+    def img_align_crop(img, landmark=None, outsize=None, scale=1.3, mask=None):
+        """
+        Align the face using five landmarks.
+
+        outsize is specified as (width, height), as expected by OpenCV.
+        """
+        target_reference_size = [112, 112]
         dst = np.array([
             [30.2946, 51.6963],
             [65.5318, 51.5014],
             [48.0252, 71.7366],
             [33.5493, 92.3655],
-            [62.7299, 92.2041]], dtype=np.float32)
+            [62.7299, 92.2041],
+        ], dtype=np.float32)
 
-        if target_size[1] == 112:
+        if target_reference_size[1] == 112:
             dst[:, 0] += 8.0
 
-        dst[:, 0] = dst[:, 0] * outsize[0] / target_size[0]
-        dst[:, 1] = dst[:, 1] * outsize[1] / target_size[1]
+        out_width, out_height = outsize
+        dst[:, 0] *= out_width / target_reference_size[0]
+        dst[:, 1] *= out_height / target_reference_size[1]
 
-        target_size = outsize
+        x_margin = out_width * (scale - 1) / 2.0
+        y_margin = out_height * (scale - 1) / 2.0
 
-        margin_rate = scale - 1
-        x_margin = target_size[0] * margin_rate / 2.
-        y_margin = target_size[1] * margin_rate / 2.
-
-        # move
         dst[:, 0] += x_margin
         dst[:, 1] += y_margin
 
-        # resize
-        dst[:, 0] *= target_size[0] / (target_size[0] + 2 * x_margin)
-        dst[:, 1] *= target_size[1] / (target_size[1] + 2 * y_margin)
+        dst[:, 0] *= out_width / (out_width + 2 * x_margin)
+        dst[:, 1] *= out_height / (out_height + 2 * y_margin)
 
         src = landmark.astype(np.float32)
-
-        # use skimage tranformation
         tform = trans.SimilarityTransform()
-        tform.estimate(src, dst)
-        M = tform.params[0:2, :]
+        if not tform.estimate(src, dst):
+            return None, None
 
-        # M: use opencv
-        # M = cv2.getAffineTransform(src[[0,1,2],:],dst[[0,1,2],:])
+        matrix = tform.params[0:2, :]
+        aligned = cv2.warpAffine(
+            img, matrix, (out_width, out_height),
+            flags=cv2.INTER_LINEAR,
+            borderMode=cv2.BORDER_CONSTANT,
+        )
 
-        img = cv2.warpAffine(img, M, (target_size[1], target_size[0]))
-
-        if outsize is not None:
-            img = cv2.resize(img, (outsize[1], outsize[0]))
-        
+        aligned_mask = None
         if mask is not None:
-            mask = cv2.warpAffine(mask, M, (target_size[1], target_size[0]))
-            mask = cv2.resize(mask, (outsize[1], outsize[0]))
-            return img, mask
-        else:
-            return img, None
+            aligned_mask = cv2.warpAffine(
+                mask, matrix, (out_width, out_height),
+                flags=cv2.INTER_NEAREST,
+                borderMode=cv2.BORDER_CONSTANT,
+            )
 
-    # Image size
-    height, width = image.shape[:2]
+        return aligned, aligned_mask
 
-    # Convert to rgb
+    _, width = image.shape[:2]
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    # Detect with dlib
     faces = face_detector(rgb, 1)
-    if len(faces):
-        # For now only take the biggest face
-        face = max(faces, key=lambda rect: rect.width() * rect.height())
-        
-        # Get the landmarks/parts for the face in box d only with the five key points
-        landmarks = get_keypts(rgb, face, predictor, face_detector)
-
-        # Align and crop the face
-        cropped_face, mask_face = img_align_crop(rgb, landmarks, outsize=(res, res), mask=mask)
-        cropped_face = cv2.cvtColor(cropped_face, cv2.COLOR_RGB2BGR)
-        
-        # Extract the all landmarks from the aligned face
-        face_align = face_detector(cropped_face, 1)
-        if len(face_align) == 0:
-            return None, None, None
-        landmark = predictor(cropped_face, face_align[0])
-        landmark = face_utils.shape_to_np(landmark)
-
-        return cropped_face, landmark, mask_face
-    
-    else:
+    if not faces:
         return None, None, None
 
+    face = max(faces, key=lambda rect: rect.width() * rect.height())
+    keypoints = get_keypts(rgb, face, predictor, face_detector)
+
+    # Default: retain the original image width rather than resizing to 256x256.
+    if res is None:
+        output_size = (width, width)
+    else:
+        output_size = (res, res)
+
+    aligned_rgb, aligned_mask = img_align_crop(
+        rgb, keypoints, outsize=output_size, mask=mask
+    )
+    if aligned_rgb is None:
+        return None, None, None
+
+    aligned_bgr = cv2.cvtColor(aligned_rgb, cv2.COLOR_RGB2BGR)
+
+    aligned_faces = face_detector(aligned_rgb, 1)
+    if not aligned_faces:
+        return aligned_bgr, None, aligned_mask
+
+    landmark_shape = predictor(aligned_rgb, aligned_faces[0])
+    landmarks = face_utils.shape_to_np(landmark_shape)
+
+    return aligned_bgr, landmarks, aligned_mask
+
 def image_manipulate(image_paths, mask_paths, dataset_path, logger):
-    """Crop every JPG image in a source folder and save its landmarks and optional mask."""
+    """Align every JPG image without changing its width or height, and save landmarks and optional masks."""
     face_detector = dlib.get_frontal_face_detector()
     predictor_path = './dlib_tools/shape_predictor_81_face_landmarks.dat'
     if not os.path.exists(predictor_path):
@@ -198,7 +203,7 @@ def image_manipulate(image_paths, mask_paths, dataset_path, logger):
             logger.warning(f"No mask found for image {source_path}")
 
         cropped_face, landmarks, cropped_mask = extract_aligned_face_dlib(
-            face_detector, face_predictor, image, mask=mask
+            face_detector, face_predictor, image, res=None, mask=mask
         )
         if cropped_face is None:
             logger.warning(f"No face found in image {source_path}")
